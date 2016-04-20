@@ -4064,7 +4064,7 @@ next_match:
 				bbox_bottomright.y - bbox_topleft.y);
 	}
 
-        // FIXMEchpe: also need to take into account if the number of columns the cursor 
+        // FIXMEchpe: also need to take into account if the number of columns the cursor
         // occupies has changed due to the cell it's on being changed...
         if ((saved_cursor.col != m_screen->cursor.col) ||
             (saved_cursor.row != m_screen->cursor.row)) {
@@ -11215,7 +11215,7 @@ VteTerminalPrivate::search_find (bool backward)
 {
         vte::grid::row_t buffer_start_row, buffer_end_row;
         vte::grid::row_t last_start_row, last_end_row;
-        bool match_found = false;
+        bool match_found = true;
 #ifdef WITH_PCRE2
         pcre2_match_context_8 *match_context = nullptr;
         pcre2_match_data_8 *match_data = nullptr;
